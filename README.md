@@ -40,7 +40,8 @@ A Retrieval-Augmented Generation (RAG) application that allows users to upload o
 
 ## Project Structure
 
-backend/
+backend/  
+
 frontend/
 
 ---
