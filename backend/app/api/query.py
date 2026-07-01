@@ -8,11 +8,6 @@ from app.services.vector_service import VectorService
 router = APIRouter()
 vector_service = VectorService()
 llm_service = LLMService()
-@router.get("/")
-async def query_root():
-    return {
-        "message": "query root"
-    }
     
 @router.post("/", response_model=QueryResponse, status_code=200)
 async def query_documents(request: QueryRequest):

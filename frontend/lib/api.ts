@@ -2,7 +2,7 @@ import axios from "axios";
 import type { QueryRequest, QueryResponse, UploadResponse } from "./types";
 
 const api = axios.create({
-   baseURL: "http://localhost:8083",
+   baseURL: process.env.NEXT_PUBLIC_API_URL ||"http://localhost:8083",
 });
 
 export async function uploadDocuments(files: File[]): Promise<UploadResponse> {

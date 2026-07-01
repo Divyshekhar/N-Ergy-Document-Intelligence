@@ -15,11 +15,6 @@ document_service = DocumentService()
 parser_service = ParserService()
 chunk_service = ChunkService()
 vector_service = VectorService()
-@router.get("/")
-async def upload_root():
-    return {
-        "message": "Upload endpoint"
-    }
 
 @router.post("/", response_model=UploadResponse, status_code=201)
 async def upload_documents(files: List[UploadFile] = File(...)):
